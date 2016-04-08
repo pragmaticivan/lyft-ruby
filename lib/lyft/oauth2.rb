@@ -34,7 +34,16 @@ module Lyft
       self.auth_code.authorize_url(options)
     end
 
-    def get_access_token(code=nil, options={})
+    def get_access_token(options={})
+      tok = self.client_credentials.get_token(options)
+      self.access_token = Lyft::AccessToken.new(tok.token,
+                                                    tok.expires_in,
+                                                    tok.expires_at)
+    rescue ::OAuth2::Error => e
+      raise OAuthError.new(e.response)
+    end
+
+    def get_auth_code_access_token(code=nil, options={})
       check_for_code!(code)
       options = default_access_code_options(options)
 
