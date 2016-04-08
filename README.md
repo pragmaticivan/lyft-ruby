@@ -18,6 +18,16 @@ Or install it yourself as:
 
     $ gem install lyft
 
+
+## Configuration
+
+```ruby
+Lyft.configure do |config|
+  config.client_id     = "YOUR_CLIENT_ID"
+  config.client_secret = "YOUR_CLIENT_SECRET"
+end
+```
+
 ## Usage
 
 TODO
