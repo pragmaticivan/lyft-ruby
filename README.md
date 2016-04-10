@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/pragmaticivan/lyft-ruby.svg?branch=master)](https://travis-ci.org/pragmaticivan/lyft-ruby)
+[![codecov.io](https://codecov.io/github/pragmaticivan/lyft-ruby/coverage.svg?branch=master)](https://codecov.io/github/pragmaticivan/lyft-ruby?branch=master)
 
 # The Lyft Ruby Gem
 
